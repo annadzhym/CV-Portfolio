@@ -1,0 +1,98 @@
+@import "../utils/mixins";
+.hello {
+  &__avatar {
+    width: 100%;
+  }
+  &__title {
+    .title;
+    text-align: left;
+    font-size: 60px;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    &--row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      height: 35px;
+      font-size: 20px;
+    }
+    &--title {
+      font-family: 'League Gothic', sans-serif;
+      color: @grey;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      width: 15%;
+
+    }
+  }
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    &--img {
+      background: url("../img/i.png") no-repeat top left;
+      height: 40px;
+      width: 21px;
+      display: inline-flex;
+      margin-right: 10px;
+    }
+    &--fb {
+      background-position: -64px 0;
+      &:hover {
+        background-position: -64px -51px;
+      }
+    }
+    &--linkedin {
+      background-position: -164px 0;
+      &:hover {
+        background-position: -164px -51px;
+      }
+    }
+    &--git{
+      background-position: -465px 0;
+      &:hover {
+        background-position: -465px -51px;
+      }
+    }
+  }
+  &__button {
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: @white;
+    text-transform: uppercase;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.55);
+    border: 1px solid #045279;
+    background-color: @blue;
+    padding: 2% 5%;
+    float: right;
+    &:hover {
+      -webkit-box-shadow: 10px 10px 20px rgba(37, 37, 37, 0.2);
+      box-shadow: 10px 10px 20px rgba(37, 37, 37, 0.2);
+      color: @black;
+      text-decoration: none;
+    }
+    &:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: 992px){
+  .hello {
+    &__avatar {
+      width: 60%;
+      margin-left: 20%;
+    }
+    &__button {
+      float: left;
+    }
+  }
+
+}

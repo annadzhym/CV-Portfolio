@@ -1,0 +1,46 @@
+@import "../utils/mixins";
+.education {
+  &__title {
+    .title;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  &__group {
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    &--title {
+      font-family: 'League Gothic', sans-serif;
+      color: @darkgrey;
+      font-weight: 500;
+      font-size: 30px;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px){
+  .education {
+    &__title {
+      .title;
+      text-align: left;
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+    &__group {
+      text-align: left;
+      &--title {
+        font-family: 'League Gothic', sans-serif;
+        color: @darkgrey;
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
