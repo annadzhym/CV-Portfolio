@@ -3,6 +3,7 @@
 @import "layout/header";
 @import "layout/hello";
 @import "layout/skills";
+@import "layout/interests";
 @import "layout/education";
 @import "layout/portfolio";
 @import "layout/mask";
@@ -74,6 +75,18 @@ body {
   background-color: @white;
   box-shadow: 0 0 20px 0 @grey;
   border-bottom: none;
+}
+
+.scrollup{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+  display: none;
+  & img {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 992px){

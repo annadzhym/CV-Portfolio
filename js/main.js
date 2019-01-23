@@ -1,6 +1,17 @@
 'use strict';
 (function ($) {
-    window.onscroll = function() {makeHeader()};
+    window.onscroll = function() {
+        makeHeader();
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    };
+    $('.scrollup').click(function(){
+    $('html, body').animate({ scrollTop: 0 }, 600);
+    return false;
+    });
 
     var header = document.querySelector("header");
     var sticky = header.offsetTop;
