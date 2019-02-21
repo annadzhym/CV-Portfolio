@@ -61,27 +61,56 @@
   &__button {
     font-family: 'League Gothic', sans-serif;
     font-weight: 500;
-    text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 2px;
     color: @white;
     text-transform: uppercase;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.55);
-    border: 1px solid #045279;
-    background-color: @blue;
-    padding: 2% 5%;
-    float: right;
-    &:hover {
-      -webkit-box-shadow: 10px 10px 20px rgba(37, 37, 37, 0.2);
-      box-shadow: 10px 10px 20px rgba(37, 37, 37, 0.2);
-      color: @black;
-      text-decoration: none;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    & svg {
+      height: 55px;
+      width: 150px;
+      fill: none;
+      stroke-width: 5;
+      & .o1 {
+        stroke: rgba(@blue, 0.7);
+        fill: @blue;
+        transition: all 1.5s ease-in-out;
+      }
+      & .o2 {
+        stroke: @white;
+        stroke-dasharray: 20, 420;
+        stroke-dashoffset: 20;
+        transition: all 1.5s ease-in-out;
+      }
     }
-    &:focus {
-      color: inherit;
-      text-decoration: none;
+    & span {
+      position: absolute;
+      margin-left: 15.5px;
+    }
+    &:hover {
+      .o1{
+        fill: rgba(@lightblue, 0.3);
+      }
+      .o2 {
+        stroke-dashoffset: -420;
+      }
     }
   }
+
+  //&:hover {
+  //    -webkit-box-shadow: 10px 10px 20px rgba(37, 37, 37, 0.2);
+  //    box-shadow: 10px 10px 20px rgba(37, 37, 37, 0.2);
+  //    color: @black;
+  //    text-decoration: none;
+  //  }
+  //  &:focus {
+  //    color: inherit;
+  //    text-decoration: none;
+  //  }
+
 }
 
 @media screen and (min-width: 992px){
@@ -90,9 +119,9 @@
       width: 60%;
       margin-left: 20%;
     }
-    &__button {
-      float: left;
-    }
+    //&__button {
+    //  float: left;
+    //}
   }
 
 }
